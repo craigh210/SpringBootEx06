@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Employee</title>
+</head>
+<body>
+<h2>Enter the new employee record in the following fields.</h2>
+<form action="#" th:action="@{/newemployee}" th:object="${employee}" method="post">
+    First Name:   <input type="text" th:field="*{fn}" /><br />
+    Last Name: <input type="text" th:field="*{ln}" /><br />
+    SSN (nnn-nn-nnnn):  <input type="text" th:field="*{ssn}" /><br />
+    Date of Birth (mm/dd/yyyy): <input type="text" th:field="*{dob}" /><br />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
